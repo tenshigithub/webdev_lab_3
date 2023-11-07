@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="hero">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT ME</a></li>
+                    <li><a href="#">HOBBIES</a></li>
+                    <li><a href="#">SUPPORT</a></li>
+                </ul>
+            </nav>
+            <div class="intro">
+                <p>BIP student</p>
+                <h1>Hi, I'm Abdul <span>Azim</span><br>This is my portfolio</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/biodata.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>My name is Abdul Azim Bin Muhammad Abdillah and I am from Terengganu, Malaysia</p>
+                    
+                    <div class="tabtitles">
+                    <p class="tablinks activelink" onclick="opentab('skills')">Skills</p>
+                    <p class="tablinks" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tabcontents activetab" id="skills">
+                    <ul>
+                        <li><span>Heavy Sleeper</span><br>I'm pretty good at sleeping</li>
+                        <li><span>Volleyball</span><br>Not a bad player but not a good player</li>
+                        <li><span>Cooking</span><br>I can cook maggi</li>
+                    </ul>
+                </div>
+                <div class="tabcontents" id="education">
+                    <ul>
+                        <li><span>Primary School</span><br>SK Manir</li>
+                        <li><span>Secondary School</span><br>SMIYT Dungun</li>
+                        <li><span>University</span><br>UTHM</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="hobbies">
+        <div class="container">
+            <h1 class="subtitles">My Hobby</h1>
+            <div class="hobbies">
+                <div>
+                    <h2>Programming</h2>
+                    <img src="images/hobby1.jpg" height="300px" width="300px">
+                    <p>I love programming</p>
+                </div>
+                <div>
+                    <h2>Volleyball</h2>
+                    <img src="images/hobby2.jpg" height="300px" width="300px">
+                    <p>I play volleyball to keep healthy</p>
+                </div>
+                <div>
+                    <h2>Gaming</h2>
+                    <img src="images/hobby3.jpg" height="300px" width="300px">
+                    <p>I play games to keep contact with my friends from afar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        var tablinks = document.getElementsByClassName("tablinks");
+        var tabcontents = document.getElementsByClassName("tabcontents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("activelink");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("activetab");
+            }
+            event.currentTarget.classList.add("activelink");
+            document.getElementById(tabname).classList.add("activetab");
+        }
+    </script>
+</body>
+</html>
